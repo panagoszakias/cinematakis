@@ -148,7 +148,7 @@ Repo (GitHub) --push--> GitHub Pages --serves--> cinematakis.gr
   9. Consider verifying the domain in GitHub account settings (Pages > Add a domain) to prevent domain takeover.
   10. Test the apex domain, `www`, and HTTP-to-HTTPS redirect.
 - **Relevant Context:** papaki.com control panel (DNS zone editor), GitHub Pages custom domain documentation, the `CNAME` file in the repo root.
-- **Status:** [-] in progress. DNS at papaki is done and verified (2026-11-14): `@` has the four `185.199.x.153` A records (and the four AAAA records on public resolvers), `www` is a CNAME to `panagoszakias.github.io`, and the MX, TXT and NS records are unchanged. `http://cinematakis.gr/` and `http://www.cinematakis.gr/` serve the site. The `CNAME` file is in the repo root. Still to do: HTTPS certificate on GitHub (the `https://` address currently fails the certificate check), tick Enforce HTTPS, optional domain verification, and a final test of apex, www and the HTTP-to-HTTPS redirect.
+- **Status:** [x] done (verified 2026-11-14). DNS at papaki: `@` has the four `185.199.x.153` A records (and four AAAA records), `www` is a CNAME to `panagoszakias.github.io`, and the MX, TXT and NS records are unchanged. `https://cinematakis.gr/` and `https://www.cinematakis.gr/` return 200 with a valid Let's Encrypt certificate (TLS 1.3, expires 2027-02-13, covers both names). HTTP redirects to HTTPS, `www` redirects to the apex, and the `github.io` address redirects to `https://cinematakis.gr/`. `robots.txt`, `sitemap.xml` and `data/events.json` are served. Not done: the optional GitHub domain verification (TXT record), left to the user.
 
 ## Sub-Task 7: Documentation and handover
 
@@ -161,7 +161,7 @@ Repo (GitHub) --push--> GitHub Pages --serves--> cinematakis.gr
   4. Write a short "future ideas" note: CMS, Astro migration, ticketing integration, newsletter.
   5. Remind the user to enable domain auto-renewal at papaki.com and 2FA on GitHub and papaki.
 - **Relevant Context:** `docs/`, `README.md`.
-- **Status:** [ ] pending
+- **Status:** [x] done. Added `docs/architecture.md`, `docs/adding-pages-or-images.md` and `docs/future-ideas.md`, extended `docs/dns-and-domain.md` (current state, rollback, reminders for auto-renewal and 2FA), and linked all guides from `docs/README.md` and the main `README.md`. The user still needs to turn on domain auto-renewal at papaki and 2FA on papaki and GitHub (cannot be done from here).
 
 ---
 

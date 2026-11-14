@@ -2,9 +2,9 @@
 
 Website for the Cinematakis cinema at **cinematakis.gr**, in Greek (default) and English.
 
-It is a static site: plain HTML, CSS and a little vanilla JavaScript. There is no build step and no framework. It will be hosted on GitHub Pages.
+It is a static site: plain HTML, CSS and a little vanilla JavaScript. There is no build step and no framework. It is hosted on GitHub Pages and served over HTTPS at <https://cinematakis.gr>. Every push to `main` updates the live site.
 
-> Status: draft pages (home, events, contact) exist in Greek and English. The events list is data-driven from `data/events.json`. See [`cinematakis-website-plan.md`](cinematakis-website-plan.md).
+> Status: live. Home, events and contact pages exist in Greek and English, and the events list is driven by `data/events.json`. Logo, colours and tagline are drafts. See the [documentation](docs/README.md) and [`cinematakis-website-plan.md`](cinematakis-website-plan.md).
 
 Cinematakis is a **mobile, pop-up cinema** from Tsintzina, Laconia, with free admission. There are no opening hours or ticket prices, so the site has an Events page (film, date, time and place of each screening) instead of fixed showtimes.
 
@@ -21,6 +21,7 @@ assets/css/style.css    Shared stylesheet
 assets/img/logo.svg     Draft logo
 assets/js/events.js     Renders upcoming events from the JSON file
 data/events.json        The list of screenings (edit this to update the site)
+CNAME                   Tells GitHub Pages the custom domain (do not delete)
 docs/                   Project documentation
 robots.txt, sitemap.xml Search engine files
 ```

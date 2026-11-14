@@ -34,9 +34,22 @@ Remove the old `A` record for `@` and the old `www` CNAME. **Keep** the MX, TXT 
 - DNS changes can take from minutes to a few hours to spread.
 - Never use a wildcard record (`*`) for this domain with GitHub Pages.
 
+## Current state (verified 2026-11-14)
+
+- The four `A` records and the `www` CNAME are in place, and the AAAA records were visible on public resolvers.
+- The MX, TXT and NS records are unchanged.
+- HTTPS works on both `https://cinematakis.gr/` and `https://www.cinematakis.gr/`. HTTP redirects to HTTPS, and `www` redirects to `cinematakis.gr`. The certificate is from Let's Encrypt and renews automatically.
+- <https://panagoszakias.github.io/cinematakis/> redirects to `https://cinematakis.gr/`.
+
 ## How to roll back
 
-Put the records from "before the change" back. The site then returns to papaki's page. The GitHub Pages site stays available at <https://panagoszakias.github.io/cinematakis/>.
+Put the records from "before the change" back in the papaki panel. The domain then returns to papaki's parking page. Because the GitHub Pages site has `cinematakis.gr` as its custom domain, the `github.io` address redirects to the domain, so it will not show the site either. To view the site during a rollback, remove the custom domain in GitHub Settings > Pages, and delete the `CNAME` file from the repo.
+
+## Reminders
+
+- Turn on **auto-renewal** for `cinematakis.gr` in the papaki panel, and keep the payment details and the contact email on the account up to date. An expired domain takes the site down.
+- Turn on **two-factor authentication** on your papaki and GitHub accounts.
+- Optional: verify the domain in your GitHub account (**Settings > Pages > Add a domain**) by adding the TXT record GitHub shows you. This stops others from claiming the domain on GitHub Pages.
 
 ## Check it worked
 
