@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://cinematakis.gr/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://cinematakis.gr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cinematakis.gr/en/"/>
+  </url>
+  <url>
+    <loc>https://cinematakis.gr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://cinematakis.gr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cinematakis.gr/en/"/>
+  </url>
+  <url>
+    <loc>https://cinematakis.gr/events/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://cinematakis.gr/events/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cinematakis.gr/en/events/"/>
+  </url>
+  <url>
+    <loc>https://cinematakis.gr/en/events/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://cinematakis.gr/events/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cinematakis.gr/en/events/"/>
+  </url>
+  <url>
+    <loc>https://cinematakis.gr/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://cinematakis.gr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cinematakis.gr/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://cinematakis.gr/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://cinematakis.gr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cinematakis.gr/en/contact/"/>
+  </url>
+</urlset>

@@ -69,7 +69,16 @@ Repo (GitHub) --push--> GitHub Pages --serves--> cinematakis.gr
   6. Add basic SEO: page titles, meta descriptions, Open Graph tags, `favicon`, `robots.txt`, `sitemap.xml`.
   7. Avoid third-party CDNs and trackers. Self-host fonts and scripts, or use system fonts.
 - **Relevant Context:** Files to create: `index.html`, `en/index.html`, and the showtimes, prices and contact pages in both languages. The user supplies the real cinema content and images.
-- **Status:** [ ] pending
+- **Status:** [x] done (draft content, awaiting user review)
+- **Completion Notes (for Sub-Task 3 and later):**
+  - **Content decisions from the user:** the cinema is mobile and does pop-up events, so there are no opening hours and no fixed venue. Admission is free (no prices page). Base is Tsintzina, Laconia. No phone. Email `info@cinematakis.gr` is not set up yet, so the contact pages show "Coming soon" with a `TODO` comment. The name comes from "cinema" + "Takis", the owner's nickname.
+  - **Pages changed from the original plan:** "Showtimes" became **Events** and "Prices and Info" was dropped. Pages now are home, events and contact in both languages (`/`, `/events/`, `/contact/`, `/en/`, `/en/events/`, `/en/contact/`).
+  - **Draft branding (to be replaced when real branding exists):** tagline "Ο κινηματογράφος που έρχεται σε σένα" / "The cinema that comes to you". Dark theme with amber accent (`--accent: #f2a93b`) set as CSS variables at the top of `assets/css/style.css`. A simple film-reel logo is in `assets/img/logo.svg` (also used as favicon). No photos yet.
+  - **SEO:** each page has a title, description, canonical, `hreflang` (el, en, x-default) and Open Graph tags. `robots.txt` and `sitemap.xml` use `https://cinematakis.gr/`, so they only fully work after Sub-Task 6. No `og:image` yet.
+  - **Paths:** all CSS, image and page links are relative. Canonical and `hreflang` URLs are absolute `https://cinematakis.gr/...`.
+  - **Events page for Sub-Task 3:** `events/index.html` and `en/events/index.html` contain `<div class="notice" id="events">` with a "schedule coming soon" message. `showtimes.js` should render into `#events` and keep that message when there are no upcoming events. Each event needs: film title (el, en), date, time, **location name (el, en)**, optional note. Free admission means no price field. The `assets/js/` folder still holds its `.gitkeep`.
+  - No map embed and no contact form were added (not needed for a mobile cinema).
+  - Verified locally that all internal `href` and `src` links resolve. Pages have not been checked in a browser yet (Sub-Task 4).
 
 ## Sub-Task 3: Data-driven showtimes
 
