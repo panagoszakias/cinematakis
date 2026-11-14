@@ -130,7 +130,7 @@ Repo (GitHub) --push--> GitHub Pages --serves--> cinematakis.gr
   2. Wait for the first deployment and verify the site loads.
   3. Check that asset paths work under the project sub-path. Use relative paths, or move to a custom domain right away (Sub-Task 6) so root-absolute paths work.
 - **Relevant Context:** GitHub repo Settings > Pages.
-- **Status:** [ ] pending
+- **Status:** [x] done. GitHub Pages is live from `main` / root and the user confirmed the links work.
 
 ## Sub-Task 6: Connect cinematakis.gr (papaki.com DNS)
 
@@ -148,7 +148,7 @@ Repo (GitHub) --push--> GitHub Pages --serves--> cinematakis.gr
   9. Consider verifying the domain in GitHub account settings (Pages > Add a domain) to prevent domain takeover.
   10. Test the apex domain, `www`, and HTTP-to-HTTPS redirect.
 - **Relevant Context:** papaki.com control panel (DNS zone editor), GitHub Pages custom domain documentation, the `CNAME` file in the repo root.
-- **Status:** [ ] pending
+- **Status:** [-] in progress. DNS at papaki is done and verified (2026-11-14): `@` has the four `185.199.x.153` A records (and the four AAAA records on public resolvers), `www` is a CNAME to `panagoszakias.github.io`, and the MX, TXT and NS records are unchanged. `http://cinematakis.gr/` and `http://www.cinematakis.gr/` serve the site. The `CNAME` file is in the repo root. Still to do: HTTPS certificate on GitHub (the `https://` address currently fails the certificate check), tick Enforce HTTPS, optional domain verification, and a final test of apex, www and the HTTP-to-HTTPS redirect.
 
 ## Sub-Task 7: Documentation and handover
 
