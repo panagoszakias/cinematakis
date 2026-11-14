@@ -1,0 +1,27 @@
+﻿# Secrets and environment files - never commit these
+.env
+.env.*
+*.pem
+*.key
+
+# Dependencies (only relevant if a build tool is added later)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Bob assistant working files
+.bob/
+
+# Logs and temporary files
+*.log
+*.tmp
