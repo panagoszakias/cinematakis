@@ -40,7 +40,17 @@ Repo (GitHub) --push--> GitHub Pages --serves--> cinematakis.gr
   6. Create the folder layout: `index.html` (Greek), `en/index.html`, `assets/css`, `assets/js`, `assets/img`, `data/`, `docs/`.
   7. Make the first commit and push to `main`.
 - **Relevant Context:** Workspace root `c:\Users\000411726\OneDrive - IBM\Desktop\cinematakis` is currently empty. OneDrive syncing a git repo can cause file-lock problems, so consider moving the repo to a non-OneDrive path such as `C:\dev\cinematakis`.
-- **Status:** [ ] pending
+- **Status:** [x] done. The user created the GitHub repo and pushed `main` to `https://github.com/panagoszakias/cinematakis.git` (verified: `main` tracks `origin/main`).
+- **Completion Notes (for Sub-Task 2 and later):**
+  - Local git repo initialised on branch `main`. First commit `029b024` "Initial project scaffold" has 10 files. Remote `origin` is `https://github.com/panagoszakias/cinematakis.git`. The default GitHub Pages URL will be `https://panagoszakias.github.io/cinematakis/`.
+  - Git identity is set **locally to this repo only**: `user.name` = `PANAGIOTIS GRIGORIOU`, `user.email` = `petergrhg1@gmail.com` (personal). The global git email is still the IBM address, so do not remove the local setting.
+  - Files created: `.gitignore`, `README.md` (layout, editing, local preview), `index.html` (Greek, `lang="el"`, "under construction" with a link to `en/`), `en/index.html` (English, `lang="en"`, link back to `../`), `docs/README.md` (index of planned guides), and `.gitkeep` in `assets/css`, `assets/js`, `assets/img` and `data`.
+  - The placeholder pages have no stylesheet, no nav, no `hreflang` and no meta description yet. Sub-Task 2 adds these. Delete each `.gitkeep` once a real file is added to that folder.
+  - `.gitignore` also ignores `.bob/`, `.vscode/`, `.env*`, `*.pem`, `*.key` and `node_modules/`. It was created through the shell, because the file tools block writing it.
+  - Git warns that LF will become CRLF (Windows default). This is harmless. A `.gitattributes` file could be added later if wanted.
+  - Page links use relative paths (`en/`, `../`), which also work under the GitHub Pages project sub-path in Sub-Task 5. Keep using relative paths for CSS, JS and images.
+  - OneDrive caveat: the repo sits in a OneDrive folder. OneDrive can lock files inside `.git` and cause "index.lock" or sync errors. If this happens, move the project to a non-OneDrive path such as `C:\dev\cinematakis`. Alternatively, pause OneDrive syncing while running git commands.
+  - The repo will be public. Do not put real personal data in it. Public phone, address and opening hours of the cinema are fine.
 
 ## Sub-Task 2: Site design, content structure and bilingual pages
 
