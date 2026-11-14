@@ -91,7 +91,14 @@ Repo (GitHub) --push--> GitHub Pages --serves--> cinematakis.gr
   4. Add sample data and a `docs/updating-showtimes.md` guide with step-by-step instructions for a beginner. It should cover editing on GitHub's web UI or locally, then commit and push.
   5. Add a basic `<noscript>` fallback message.
 - **Relevant Context:** `data/`, `assets/js/`, `docs/`.
-- **Status:** [ ] pending
+- **Status:** [x] done (awaiting user review)
+- **Completion Notes (for Sub-Task 4 and later):**
+  - Data file is `data/events.json` (named "events", not "movies", because the cinema is mobile). It is **empty on purpose** (`{"events": []}`), so the live site shows "schedule coming soon" and no invented screenings. Fields per event: `date` (YYYY-MM-DD), `time` (HH:MM), `title` {el,en}, `location` {el,en}, optional `note` {el,en}. No poster or price fields.
+  - `assets/js/events.js` finds any element with `data-events-src`, shows upcoming events (compared with today's date in `Europe/Athens`), sorted and grouped by date. Invalid entries are skipped. `data-limit="1"` shows only the next event. All text is inserted with `textContent`. On fetch failure or an empty list the existing fallback text stays.
+  - Events page (both languages) uses it fully. The home pages have a "Next screening" section that is `hidden` until an upcoming event exists. `<noscript>` message added on the events pages.
+  - Guide for the user: `docs/updating-events.md` (GitHub web UI and local git steps). Linked from `README.md` and `docs/README.md`.
+  - Verified in headless Edge with a temporary copy of the site and test data: the English home page rendered the next event, and HTML in a title was shown as text (not executed). The Events pages, the Greek pages and the past-date and invalid-entry filtering were not separately checked in a browser (the first attempt hung and was abandoned). Sub-Task 4 should cover this. Test data was never written to the real `data/events.json`.
+  - Testing tip: the JSON is fetched, so pages must be served over HTTP (`python -m http.server 8000 --bind 127.0.0.1`). Leftover headless Edge or Python processes can lock files and hang commands, so check for them.
 
 ## Sub-Task 4: Local preview and quality checks
 

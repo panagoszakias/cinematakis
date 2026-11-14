@@ -38,9 +38,10 @@
       <h1>Events</h1>
       <p class="lead">Our screenings take place in different locations. For each screening you will find the film, date, time and place here.</p>
 
-      <div class="notice" id="events">
+      <div class="notice" id="events" data-events-src="../../data/events.json">
         <p>The schedule will be announced soon. Admission is free.</p>
       </div>
+      <noscript><p>JavaScript is required to show the schedule.</p></noscript>
     </div>
   </main>
 
@@ -49,5 +50,6 @@
       <p>© Cinematakis · Tsintzina, Laconia, Greece</p>
     </div>
   </footer>
+  <script src="../../assets/js/events.js" defer></script>
 </body>
 </html>

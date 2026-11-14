@@ -38,9 +38,10 @@
       <h1>Εκδηλώσεις</h1>
       <p class="lead">Οι προβολές μας γίνονται σε διαφορετικά μέρη. Για κάθε προβολή θα βρείτε εδώ την ταινία, την ημερομηνία, την ώρα και τον τόπο.</p>
 
-      <div class="notice" id="events">
+      <div class="notice" id="events" data-events-src="../data/events.json">
         <p>Το πρόγραμμα θα ανακοινωθεί σύντομα. Η είσοδος είναι ελεύθερη.</p>
       </div>
+      <noscript><p>Για να δείτε το πρόγραμμα χρειάζεται JavaScript.</p></noscript>
     </div>
   </main>
 
@@ -49,5 +50,6 @@
       <p>© Cinematakis · Τσιντζίνα Λακωνίας</p>
     </div>
   </footer>
+  <script src="../assets/js/events.js" defer></script>
 </body>
 </html>

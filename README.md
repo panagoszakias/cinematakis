@@ -4,7 +4,7 @@ Website for the Cinematakis cinema at **cinematakis.gr**, in Greek (default) and
 
 It is a static site: plain HTML, CSS and a little vanilla JavaScript. There is no build step and no framework. It will be hosted on GitHub Pages.
 
-> Status: draft pages (home, events, contact) exist in Greek and English. The events list is data-driven in a later step. See [`cinematakis-website-plan.md`](cinematakis-website-plan.md).
+> Status: draft pages (home, events, contact) exist in Greek and English. The events list is data-driven from `data/events.json`. See [`cinematakis-website-plan.md`](cinematakis-website-plan.md).
 
 Cinematakis is a **mobile, pop-up cinema** from Tsintzina, Laconia, with free admission. There are no opening hours or ticket prices, so the site has an Events page (film, date, time and place of each screening) instead of fixed showtimes.
 
@@ -19,8 +19,8 @@ en/events/index.html    English events page
 en/contact/index.html   English contact page
 assets/css/style.css    Shared stylesheet
 assets/img/logo.svg     Draft logo
-assets/js/              JavaScript
-data/                   Events data (JSON)
+assets/js/events.js     Renders upcoming events from the JSON file
+data/events.json        The list of screenings (edit this to update the site)
 docs/                   Project documentation
 robots.txt, sitemap.xml Search engine files
 ```
@@ -28,8 +28,7 @@ robots.txt, sitemap.xml Search engine files
 ## How to edit content
 
 - Page text lives in the HTML files. Greek pages are at the root and English pages are under `en/`. Every page exists in both languages, so change both when you edit one.
-- Events will live in a single file in `data/`. Updating the programme means editing that file only.
-- A step-by-step guide will be added in `docs/` once the events feature exists.
+- Screenings live in a single file, `data/events.json`. Updating the programme means editing that file only. Step-by-step guide: [`docs/updating-events.md`](docs/updating-events.md).
 - The contact email (`info@cinematakis.gr`) is not shown yet. Add it to both contact pages once the mailbox exists (look for the `TODO` comment).
 
 ## How to preview locally

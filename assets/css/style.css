@@ -201,6 +201,26 @@ h3 {
   border-left: 4px solid var(--accent);
 }
 
+.event-date {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.card .event-meta {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.card .event-meta + p {
+  margin-top: 0.4rem;
+}
+
+.cards.events {
+  grid-template-columns: 1fr;
+}
+
+
 .details {
   margin: 0;
 }
