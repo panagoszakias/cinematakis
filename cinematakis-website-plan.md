@@ -110,7 +110,16 @@ Repo (GitHub) --push--> GitHub Pages --serves--> cinematakis.gr
   3. Run Lighthouse in the browser for accessibility, SEO and performance.
   4. Test on a phone-sized viewport.
 - **Relevant Context:** `README.md`, `docs/`.
-- **Status:** [ ] pending
+- **Status:** [x] done (Lighthouse not run, see notes)
+- **Completion Notes (for Sub-Task 5 and later):**
+  - Local preview works with `python -m http.server 8000 --bind 127.0.0.1` (already documented in `README.md`).
+  - **Links and structure (all 6 pages):** no broken internal links or assets. Each page has one `h1`, a correct `lang`, a description, a canonical URL, `aria-current` on the active nav item, and no image without `alt`. The six URLs in `sitemap.xml` match the six pages.
+  - **Events logic (tested in headless Edge on a temporary copy with test data, in Greek and English):** upcoming events appear sorted by date, a past event and an entry with an invalid date are hidden, HTML in a title is shown as text, and the home page "Next screening" shows only the first event. The real `data/events.json` stayed empty.
+  - **Mobile:** at a 390px viewport none of the six pages scrolls sideways (scroll width equals client width). A headless screenshot looked cropped at the right edge, but that came from Edge's minimum window width, not from the site.
+  - **Contrast (calculated, WCAG):** body text 15.8:1, muted text 7.8:1 to 8.7:1, accent on dark 8.0:1 to 9.0:1, button text 9.0:1, all above the 4.5:1 requirement. Card and header borders are only 1.6:1 against the background, which is fine because they are decorative. Keyboard focus uses a 3px accent outline.
+  - **Not done:** a Lighthouse run, because it needs the browser DevTools and Node is not installed. The user can run it in Edge or Chrome (DevTools > Lighthouse) after deployment in Sub-Task 5, and report any findings.
+  - **Not done:** a visual check of every page on a phone. Only the English home page was screenshotted.
+  - Testing tip: headless Edge and `http.server` processes can stay running and block later commands, so check for leftovers and use a temporary copy of the site for test data.
 
 ## Sub-Task 5: Deploy with GitHub Pages
 
